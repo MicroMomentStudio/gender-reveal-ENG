@@ -148,13 +148,13 @@ p {
     font-size: 15px;
 }
 
-/* Letter Box */
+/* Letter Box (LTR Aligned for English) */
 .letter-box {
     background: #f1f8e9; 
     border: 2px dashed #a5d6a7;
     padding: 15px;
     border-radius: 12px;
-    text-align: right;
+    text-align: left;
     font-size: 13px;
     color: #333;
     line-height: 1.6;
