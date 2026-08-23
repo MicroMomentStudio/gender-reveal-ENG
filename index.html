@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مفاجأة جنس بيبي ماما مريم وبابا محمد 🍼✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <!-- Main Page Wrapper to center card and keep footer at bottom -->
+    <div class="page-wrapper">
+        <div class="card">
+            
+            <!-- STAGE 0: INTRODUCTION / WELCOME -->
+            <div id="intro-stage" class="stage active">
+                <div class="emoji">🍼✨</div>
+                <h1>مرحباً بكم في مغامرتنا الصغنونة!</h1>
+                <p>ماما مريم و بابا محمد جهزوا لكم هاللعبة الخفيفة عشان تكتشفون وياهم جنس البيبي اليديد...</p>
+                <button class="btn primary-btn" onclick="switchStages('intro-stage', 'game1-stage')">ابدأو اللعبة 🎮</button>
+            </div>
+
+            <!-- STAGE 1: FIND THE BOTTLE GAME -->
+            <div id="game1-stage" class="stage hidden">
+                <div class="emoji">🍼📦</div>
+                <h1>لعبة البحث عن المرضعة!</h1>
+                <p id="msg1">اختاروا واحد من الصناديق و دوروا الرضاعة المدسوسة...</p>
+                
+                <div class="boxes-container">
+                    <div class="box-item" onclick="checkFirstGame(this, false)">📦</div>
+                    <div class="box-item" onclick="checkFirstGame(this, false)">📦</div>
+                    <div class="box-item" onclick="checkFirstGame(this, firstGameWin)">📦</div>
+                </div>
+            </div>
+
+            <!-- STAGE 2: HATCH THE EGG GAME -->
+            <div id="game2-stage" class="stage hidden">
+                <div class="emoji" id="egg-emoji">🥚</div>
+                <h1>تفقيس البيضة السحرية!</h1>
+                <p id="msg2">اضغطوا على البيضة عشان تكبر وتتفقس...</p>
+                <button id="egg-btn" class="btn primary-btn" onclick="hatchEgg()">اضغطوا هنا 👆</button>
+            </div>
+
+            <!-- STAGE 3: THE PINK OR BLUE CHOICE -->
+            <div id="game3-stage" class="stage hidden">
+                <div class="emoji">❓✨</div>
+                <h1>اللحظة الحاسمة!</h1>
+                <p>برأيكم، البيبي الياي يميل لأي لون؟ اختاروا بحكمة...</p>
+                
+                <div class="button-group">
+                    <button class="btn choice-btn" onclick="makeChoice('pink')">🩷</button>
+                    <button class="btn choice-btn" onclick="makeChoice('blue')">🩵</button>
+                </div>
+                <p id="choice-feedback" class="feedback-text"></p>
+            </div>
+
+            <!-- STAGE 4: THE FINAL BOY REVEAL -->
+            <div id="result-stage" class="stage hidden reveal-stage">
+                <div class="emoji">👶💙</div>
+                <h1>مفاجأة ماما مريم وبابا محمد!</h1>
+                <p class="reveal-title">البيبي طلع <strong>صبي!</strong> 🧢✨</p>
+                
+                <div class="letter-box">
+                    <p><strong>من ماما مريم وبابا محمد:</strong></p>
+                    <p>الحمدلله الذي بنعمته تتم الصالحات! ربي رزقنا بولي العهد وقطعة من قلبنا. شكراً لأنكم شاركتونا هاللعبة واللحظة الحلوة! 🤍</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDIO CREDIT FOOTER -->
+        <div class="studio-credit">
+            <a href="https://instagram.com/micromoment.studio" target="_blank">Created by @micromoment.studio ✨</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
