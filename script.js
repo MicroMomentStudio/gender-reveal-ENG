@@ -11,7 +11,7 @@ function switchStages(currentId, nextId) {
 // --- GAME 1: FIND THE BOTTLE ---
 function firstGameWin(element) {
     element.textContent = "🍼";
-    document.getElementById('msg1').textContent = "كفو! لقيتوا المرضعة الصح! 🎉";
+    document.getElementById('msg1').textContent = "Awesome! You found the right bottle! 🎉";
     
     setTimeout(() => {
         switchStages('game1-stage', 'game2-stage');
@@ -24,7 +24,7 @@ function checkFirstGame(element, isCorrect) {
     } else {
         element.textContent = "💔";
         element.style.pointerEvents = 'none';
-        document.getElementById('msg1').textContent = "أوبس، مب هذي! حاولوا في صندوق ثاني 🤭";
+        document.getElementById('msg1').textContent = "Oops, not this one! Try another box 🤭";
     }
 }
 
@@ -32,11 +32,11 @@ function checkFirstGame(element, isCorrect) {
 let eggStep = 0;
 const eggStages = ['🥚', '🐣', '🐤', '💥', '👼'];
 const eggMessages = [
-    "البيضة تحركت شوي! اضغطوا مرة ثانية...",
-    "طلع راس الكتكوت الصغنون! اضغطوا بعد...",
-    "يا الله، وايد قريب تتفقس!",
-    "بووووم! الكائن اللطيف طلع!",
-    "يا حليله البيبي!"
+    "The egg moved a bit! Tap again...",
+    "The tiny chick's head popped out! Keep tapping...",
+    "Oh, it's getting super close to hatching!",
+    "BOOM! The cute little one is out!",
+    "Look at the sweet baby!"
 ];
 
 function hatchEgg() {
@@ -51,7 +51,7 @@ function hatchEgg() {
     }
 
     if (eggStep === eggStages.length - 1) {
-        eggBtn.textContent = "للنهاية الكبرى ✨";
+        eggBtn.textContent = "To the Grand Finale ✨";
     }
 
     if (eggStep >= eggStages.length) {
@@ -66,10 +66,10 @@ function makeChoice(choice) {
     const feedback = document.getElementById('choice-feedback');
 
     if (choice === 'pink') {
-        feedback.textContent = "❌ غلط! مب وردي، جربوا اللون الثاني 🤭";
+        feedback.textContent = "❌ Wrong! Not pink, try the other color 🤭";
         feedback.style.color = "#d32f2f";
     } else {
-        feedback.textContent = "✅ صح 100%! إحساسكم في مكانه 🎉";
+        feedback.textContent = "✅ 100% Correct! Your intuition is spot on 🎉";
         feedback.style.color = "#388e3c";
 
         triggerConfetti();
