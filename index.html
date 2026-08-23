@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مفاجأة جنس بيبي ماما مريم وبابا محمد 🍼✨</title>
+    <title>Baby Gender Reveal Surprise: Mama Maryam & Papa Mohamed 🍼✨</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Canvas Confetti Library -->
@@ -18,16 +18,16 @@
             <!-- STAGE 0: INTRODUCTION / WELCOME -->
             <div id="intro-stage" class="stage active">
                 <div class="emoji">🍼✨</div>
-                <h1>مرحباً بكم في مغامرتنا الصغنونة!</h1>
-                <p>ماما مريم و بابا محمد جهزوا لكم هاللعبة الخفيفة عشان تكتشفون وياهم جنس البيبي اليديد...</p>
-                <button class="btn primary-btn" onclick="switchStages('intro-stage', 'game1-stage')">ابدأو اللعبة 🎮</button>
+                <h1>Welcome to our little adventure!</h1>
+                <p>Mama Maryam and Papa Mohamed prepared this fun little game so you can discover their new baby's gender together...</p>
+                <button class="btn primary-btn" onclick="switchStages('intro-stage', 'game1-stage')">Start Game 🎮</button>
             </div>
 
             <!-- STAGE 1: FIND THE BOTTLE GAME -->
             <div id="game1-stage" class="stage hidden">
                 <div class="emoji">🍼📦</div>
-                <h1>لعبة البحث عن المرضعة!</h1>
-                <p id="msg1">اختاروا واحد من الصناديق و دوروا الرضاعة المدسوسة...</p>
+                <h1>Find the Baby Bottle!</h1>
+                <p id="msg1">Pick one of the boxes and look for the hidden bottle...</p>
                 
                 <div class="boxes-container">
                     <div class="box-item" onclick="checkFirstGame(this, false)">📦</div>
@@ -39,16 +39,16 @@
             <!-- STAGE 2: HATCH THE EGG GAME -->
             <div id="game2-stage" class="stage hidden">
                 <div class="emoji" id="egg-emoji">🥚</div>
-                <h1>تفقيس البيضة السحرية!</h1>
-                <p id="msg2">اضغطوا على البيضة عشان تكبر وتتفقس...</p>
-                <button id="egg-btn" class="btn primary-btn" onclick="hatchEgg()">اضغطوا هنا 👆</button>
+                <h1>Hatch the Magic Egg!</h1>
+                <p id="msg2">Tap the egg to make it grow and hatch...</p>
+                <button id="egg-btn" class="btn primary-btn" onclick="hatchEgg()">Tap Here 👆</button>
             </div>
 
             <!-- STAGE 3: THE PINK OR BLUE CHOICE -->
             <div id="game3-stage" class="stage hidden">
                 <div class="emoji">❓✨</div>
-                <h1>اللحظة الحاسمة!</h1>
-                <p>برأيكم، البيبي الياي يميل لأي لون؟ اختاروا بحكمة...</p>
+                <h1>The Ultimate Moment!</h1>
+                <p>What do you think? Which color does the coming baby lean toward? Choose wisely...</p>
                 
                 <div class="button-group">
                     <button class="btn choice-btn" onclick="makeChoice('pink')">🩷</button>
@@ -60,12 +60,12 @@
             <!-- STAGE 4: THE FINAL BOY REVEAL -->
             <div id="result-stage" class="stage hidden reveal-stage">
                 <div class="emoji">👶💙</div>
-                <h1>مفاجأة ماما مريم وبابا محمد!</h1>
-                <p class="reveal-title">البيبي طلع <strong>صبي!</strong> 🧢✨</p>
+                <h1>Mama Maryam & Papa Mohamed's Surprise!</h1>
+                <p class="reveal-title">It's a <strong>Baby Boy!</strong> 🧢✨</p>
                 
                 <div class="letter-box">
-                    <p><strong>من ماما مريم وبابا محمد:</strong></p>
-                    <p>الحمدلله الذي بنعمته تتم الصالحات! ربي رزقنا بولي العهد وقطعة من قلبنا. شكراً لأنكم شاركتونا هاللعبة واللحظة الحلوة! 🤍</p>
+                    <p><strong>From Mama Maryam & Papa Mohamed:</strong></p>
+                    <p>Praise be to God, by whose grace good deeds are completed! God has blessed us with our little prince and a piece of our hearts. Thank you for sharing this fun game and sweet moment with us! 🤍</p>
                 </div>
             </div>
         </div>
